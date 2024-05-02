@@ -1,6 +1,6 @@
 Game.registerMod("extraContent",{
     init:function(){
-        this.spritesheet=App?this.dir+"/img.png":"https://raw.githubusercontent.com/Lookas123/ECM/main/ExtraContent.png" //hurrah github
+        this.spritesheet=App?this.dir+"/img.png":"https://lookas123.github.io/ECM/ExtraContent.png" //hurrah github
         this.createAchievements=function(){
             this.achievements = []
             this.achievements.push(new Game.Achievement("Block of gold", "Click <b>77,777 golden cookies.</b> <q>Worth approximately 9 ingots.</q>",[0,0,this.spritesheet]))
