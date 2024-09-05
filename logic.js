@@ -14,7 +14,7 @@ Game.registerMod("extraContent",{
         this.achievements.push(new Game.Achievement("Plant based diet", "Sacrifice the garden <b>50</b> times. <q>Those hornets must be fat by now.</q>",[4,18, "img/gardenPlants.png"]))
         this.achievements.push(new Game.Achievement("Hole in your pocket", "Bake a ridiculous number of cookies (current requirement: <b>1 quinvigintillion</b>). <q>Which at this point, is just the entire multiverse.</q>",[26,17]))
         this.achievements.push(new Game.Achievement("The will of the wondrous wizards wealthy wand", "Cast <b>999,999</b> spells. <q>Which wizard? Will.</q>",[27,11]))
-        this.achievements.push(new Game.Achievement("Go outside", "Run out of extra content. <q>and take a shower.</q>",[4,0,this.spritesheet]))
+        //this.achievements.push(new Game.Achievement("Go outside", "Run out of extra content. <q>and take a shower.</q>",[4,0,this.spritesheet]))
         for(let i of this.achievements){i.pool="shadow";i.order=69420;}
         LocalizeUpgradesAndAchievs()
     },
@@ -26,7 +26,7 @@ Game.registerMod("extraContent",{
         if(Game.Objects["Wizard tower"].minigameLoaded && Game.Objects['Wizard tower'].minigame.spellsCastTotal>=999999)Game.Win("The will of the wondrous wizards wealthy wand")
         if(Game.Objects.Farm.minigameLoaded && Game.Objects.Farm.minigame.convertTimes >= 50)Game.Win("Plant based diet")
         if(Game.wrinklers.every((w)=>{return w.type==1})) Game.Win("Repopulation")
-        if(Game.mods["extraContent"].achievements.every((a)=>{return a.won||(a.name=="Go outside")})) Game.Win("Go outside")
+        //if(Game.mods["extraContent"].achievements.every((a)=>{return a.won||(a.name=="Go outside")})) Game.Win("Go outside")
     },
     save: function(){
         let str = "";
