@@ -1,5 +1,9 @@
 Game.registerMod("extraContent",{
     init:function(){
+	if(l('topbarFrenzy')){
+		Game.Notify("You are playing on an unofficial version of the game, ECM will not function","Please play on orteil.dashnet.org/cookieclicker")
+		return;
+	}
         this.spritesheet=App?this.dir+"/img.png":"https://lookas123.github.io/ECM/ExtraContent.png" //hurrah github
         if(Game.ready) this.createAchievements()
         else Game.registerHook("create", this.createAchievements)
